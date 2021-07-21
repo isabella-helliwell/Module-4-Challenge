@@ -66,4 +66,13 @@ output.1
 output.2
 ![image](https://user-images.githubusercontent.com/85843030/126567757-e80f079f-c25e-4cbc-aac6-5ede651b005b.png)
 
+          We need to combine the shcool data and the student data in order to be able to carry on with the analysis. This is done by using a common
+          column and merge the two data sets together into a single data set.
+             # Combine the data into a single dataset
+                  school_data_complete_df = pd.merge(student_data_df, school_data_df, how="left", on=["school_name", "school_name"])
+                  school_data_complete_df.tail(10)
 
+output.3
+![image](https://user-images.githubusercontent.com/85843030/126568214-efe70d7d-807d-4b1d-8531-5a896837150f.png)
+
+          Count the total schools  
