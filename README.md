@@ -75,4 +75,9 @@ output.2
 output.3
 ![image](https://user-images.githubusercontent.com/85843030/126568214-efe70d7d-807d-4b1d-8531-5a896837150f.png)
 
-          Count the total schools  
+          Next is to carry out some calculations, 
+          1-total school and student count 
+          2-average math, average reading, and overall average scores for all students in the schools
+          3-total students in grade 9 at Thomas High School
+          4-new students count, 
+          
