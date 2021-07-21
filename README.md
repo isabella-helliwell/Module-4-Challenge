@@ -54,7 +54,16 @@
 output.1
 ![image](https://user-images.githubusercontent.com/85843030/126567144-cbaf49e3-13c2-4ba6-a182-00c699aa8b71.png)
 
+         Next step is to replace all the 9th grade student's math and reading grades with "NaN" (not a number) value for Thomas High School.
+         
+             # Refactor the code in Step 2 to replace the math scores with NaN's.
+
+             student_data_df.loc[(student_data_df["school_name"] =="Thomas High School")&(student_data_df["grade"] =="9th"), "reading_score"]=np.nan
+             student_data_df.loc[(student_data_df["school_name"] =="Thomas High School")&(student_data_df["grade"] =="9th"), "math_score"]=np.nan
+             # Check the student data for NaN's. 
+             student_data_df.tail(10)
             
-            
-            
-            
+output.2
+![image](https://user-images.githubusercontent.com/85843030/126567757-e80f079f-c25e-4cbc-aac6-5ede651b005b.png)
+
+
