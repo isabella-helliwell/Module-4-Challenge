@@ -621,5 +621,6 @@ output. 16
  ### 4.4 Effect by School Size & School Type
       No effect on adding the 'nan's" to Thomas High School 9 graders as mentioned above. The math, reading scores have already taken into account and omitted 
       the non values of the 9 graders previously, and therefore any additional analysis here will nopt directly affect the results.
-  
-In general, if we had used the Thomas High values in output. 5 and not replaced them with output. 6, our data would have changed somewhat.
+      
+      In general, if we had used the Thomas High values in output. 5 and not replaced them with output. 6, our data would have changed somewhat.
+
