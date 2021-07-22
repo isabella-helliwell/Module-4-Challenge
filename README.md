@@ -589,7 +589,7 @@ output. 16
             
             
   ##. 4 Results and comaprisons
-        Effect on district summary:
+  ### 4.1 Effect on district summary:
         After replacing the 9th grader student's grades with a "NaN', it can bee seen (comparing output 4 and 18)that the effect on the overall percentage pass
         and grades are insignificant
             
@@ -598,12 +598,17 @@ output. 16
   ![image](https://user-images.githubusercontent.com/85843030/126686498-3392b253-df9d-4109-8fe6-41e2aec030ae.png)
 
            
-        Effetc on school summary
+  ### 4.2 Effetc on school summary
         Comparing output.5 and output 6, we can see that in output.5, where the percentage passing rates have been calculated inclusive of the 
         'NaN' values for the Thomas High School, the rates are much lower, due to the fact that the percentage calculations for the 
         Thomas High School take into account all grades, hence the exsistance of the 9th graders with no marks, will bring the scores down.
         In output .6, the percentage score calculations have only taken into account the students for the 10th-12th graders, hence the calculated
         scores will be much higher without any blank values bringing the scores down.
+        
+### 4.3 Effect on Math and Reading Scores by Grade
+        
+        Removing the 9th gradres from the scores by grades, will have no effect on the table itself, apart from where the "9th" column is visible
+        for the Thomas High School, it will show a "nan" value as spected.
         
         
             
