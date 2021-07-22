@@ -417,7 +417,7 @@ output. 10
 
 
 
-#### 3.1.5 Scores by School Spending
+  #### 3.1.5 Scores by School Spending
            The school spending is calculated here, where we define some ranges, and categorize the schools into small, medium and large
            We have already calculated per schools capita spending in the school summary section by dividing the school budget/tot number of schools
            per_school_capita = per_school_budget / per_school_counts
@@ -543,3 +543,57 @@ output.15
                         
 output. 16
 ![image](https://user-images.githubusercontent.com/85843030/126675881-c1691a83-a494-4316-a65c-43b7c2e7d367.png)
+
+
+   #### 3.1.7 Scores by School Type
+            Divide the school types into district and charter to see if there are any significant differences in academic performance.
+            
+                  # Calculate averages for the desired columns. 
+                        type_math_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Math Score"]
+
+                        type_reading_scores = per_school_summary_df.groupby(["School Type"]).mean()["Average Reading Score"]
+
+                        type_passing_math = per_school_summary_df.groupby(["School Type"]).mean()["% Passing Math"]
+
+                        type_passing_reading = per_school_summary_df.groupby(["School Type"]).mean()["% Passing Reading"]
+
+                        type_overall_passing = per_school_summary_df.groupby(["School Type"]).mean()["% Overall Passing"]     
+
+                  # Assemble into DataFrame. 
+                        type_summary_df = pd.DataFrame({
+                                  "Average Math Score" : type_math_scores,
+                                  "Average Reading Score": type_reading_scores,
+                                  "% Passing Math": type_passing_math,
+                                  "% Passing Reading": type_passing_reading,
+                                  "% Overall Passing": type_overall_passing})
+                                  
+                   # Format the DataFrame 
+                        type_summary_df["Average Math Score"] = type_summary_df["Average Math Score"].map("{:.1f}".format)
+
+                        type_summary_df["Average Reading Score"] = type_summary_df["Average Reading Score"].map("{:.1f}".format)
+
+                        type_summary_df["% Passing Math"] = type_summary_df["% Passing Math"].map("{:.0f}".format)
+
+                        type_summary_df["% Passing Reading"] = type_summary_df["% Passing Reading"].map("{:.0f}".format)
+
+                        type_summary_df["% Overall Passing"] = type_summary_df["% Overall Passing"].map("{:.0f}".format)
+
+                        type_summary_df                                  
+                                  
+
+                    
+  output .17
+  ![image](https://user-images.githubusercontent.com/85843030/126676576-15da310d-9cb9-45da-b842-9e27caba4eda.png)
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+   
+          
+
