@@ -587,8 +587,7 @@ output. 16
   ![image](https://user-images.githubusercontent.com/85843030/126676576-15da310d-9cb9-45da-b842-9e27caba4eda.png)
 
             
-            
-  ##. 4 Results and comaprisons
+ ## 4 Results and comaprisons
   ### 4.1 Effect on district summary:
         After replacing the 9th grader student's grades with a "NaN', it can bee seen (comparing output 4 and 18)that the effect on the overall percentage pass
         and grades are insignificant
@@ -611,7 +610,15 @@ output. 16
         for the Thomas High School, it will show a "nan" value as spected.
         
         
-            
+### 4.3 Effect on Scores by School Spending
+
+      There is no affect on this criteria, because in our analysis we have already replaced the Thomas High School scores with the scores that
+      were calculated using only 10-12 graders results.
+      It is also worth noting that the total students at the Thomas High School is still shown as 1635. Despite the fact that we have used 
+      1635(tot)-461(9th graders) =1174 for the anaysis were the 9th graders have been omitted.
    
-          
+ ### 4.4 Effect by School Size & School Type
+      No effect on adding the 'nan's" to Thomas High School 9 graders as mentioned above. The math, reading scores have already taken into account
+      the non values of the 9 graders previously, and therefore any additional analysis here will nopt directly affect the results.
+  
 
