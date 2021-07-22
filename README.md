@@ -599,6 +599,12 @@ output. 16
 
            
         Effetc on school summary
+        Comparing output.5 and output 6, we can see that in output.5, where the percentage passing rates have been calculated inclusive of the 
+        'NaN' values for the Thomas High School, the rates are much lower, due to the fact that the percentage calculations for the 
+        Thomas High School take into account all grades, hence the exsistance of the 9th graders with no marks, will bring the scores down.
+        In output .6, the percentage score calculations have only taken into account the students for the 10th-12th graders, hence the calculated
+        scores will be much higher without any blank values bringing the scores down.
+        
         
             
    
