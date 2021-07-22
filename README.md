@@ -22,7 +22,7 @@
   - Data source: students_complete.csv
   - Software: Python 3.7.6, Visual Studio Code version 1.58
   - web application: Jupyter Notebook
-  - 
+ 
 ## 3. Analysis
 ### 3.1 District Summary and School Summary
 #### 3.1.1 District Summary
