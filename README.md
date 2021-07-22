@@ -22,6 +22,7 @@
   - Data source: students_complete.csv
   - Software: Python 3.7.6, Visual Studio Code version 1.58
   - web application: Jupyter Notebook
+  - 
 ## 3. Analysis
 ### 3.1 District Summary and School Summary
 #### 3.1.1 District Summary
@@ -134,22 +135,17 @@ output.3
                                                                   & (school_data_complete_df["reading_score"] >= 70)
                                                                   & (school_data_complete_df["reading_score"]!=np.nan)]
                                                                   
-                                                                  
-                                                                  
-          
-          
-          
-          
+
           
           8-Calculate the number of students that passed both reading and math.
                   overall_passing_math_reading_count = passing_math_reading_new["student_name"].count()
                   
           
-          7-.Calculate the overall passing percentage with new total student count
+          9-.Calculate the overall passing percentage with new total student count
                  overall_passing_percentage = overall_passing_math_reading_count / student_count_new *100
                  overall_passing_percentage
           
-          8- Creeate a DataFrame and format the columns
+          10- Creeate a DataFrame and format the columns
                   district_summary_df = pd.DataFrame(
                            [{"Total Schools": school_count, 
                            "Total Students": student_count, 
@@ -348,8 +344,31 @@ output .8
                         twelfth_grade_reading_scores = twelfth_graders.groupby(["school_name"]).mean()["reading_score"]
 
 
+            1. Combine each Series for average math scores by school into single data frame.
+
+                        math_scores_by_grade = pd.DataFrame({
+                                       "9th": ninth_grade_math_scores,
+                                       "10th": tenth_grade_math_scores,
+                                       "11th": eleventh_grade_math_scores,
+                                       "12th": twelfth_grade_math_scores})
+
+                        math_scores_by_grade.head(15)
+                        
+output. 9
+![image](https://user-images.githubusercontent.com/85843030/126664664-89a4d596-0370-4f8e-8bba-2341266c05ca.png)
 
 
 
+            2. Combine each Series for average reading scores by school into single data frame.
+                        reading_scores_by_grade = pd.DataFrame({
+                                          "9th": ninth_grade_reading_scores,
+                                            "10th": tenth_grade_reading_scores,
+                                            "11th": eleventh_grade_reading_scores,
+                                            "12th": twelfth_grade_reading_scores})
+
+                        reading_scores_by_grade.head(15)
+                    
+  output. 10
+  ![image](https://user-images.githubusercontent.com/85843030/126665141-fc1ad606-588b-46e6-8325-1096b80eee6f.png)
 
 
