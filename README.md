@@ -417,4 +417,22 @@ output. 10
 
 
 
+#### 3.1.5 Scores by School Spending
+           The school spending is calculated here, where we define some ranges, and categorize the schools into small, medium and large
+           We have already calculated per schools capita spending in the school summary section by dividing the school budget/tot number of schools
+           per_school_capita = per_school_budget / per_school_counts
+           
+ output. 11 
+ ![image](https://user-images.githubusercontent.com/85843030/126670693-068d75c9-d707-4472-81f0-656c87ad4e51.png)
+ 
 
+           
+           We want to get the statistic value for the spending so we can get an idea of the ranges.
+           #get the stats for the spending
+           per_school_capita.describe() 
+           
+           
+  output. 12
+  ![image](https://user-images.githubusercontent.com/85843030/126670985-943507e7-aa44-4a80-8056-5e63e5379383.png)
+
+             
