@@ -298,4 +298,58 @@ output .5
  output .6
  ![image](https://user-images.githubusercontent.com/85843030/126660865-36d72c90-3b34-478e-8a9f-b39047118b17.png)
 
-    
+   #### 3.1.3 High and Low Performing Schools
+              The five top and five bottom performing schools are sorted on their overall percentage pass.
+              
+              # Sort and show top five performing schools.
+                  top_schools = per_school_summary_df.sort_values(["% Overall Passing"], ascending=False)
+                  top_schools.head()
+              
+                  
+  output .7 
+  ![image](https://user-images.githubusercontent.com/85843030/126663197-b61e6998-1786-4eef-bdbf-3d1e599fde31.png)
+
+            # Sort and show top five worst performing schools.
+            bottom_schools = per_school_summary_df.sort_values(["% Overall Passing"], ascending=True)
+            bottom_schools.head()
+
+
+output .8
+![image](https://user-images.githubusercontent.com/85843030/126663578-303c427a-f6d4-4e8f-9d78-d10f5ad16837.png)
+
+#### 3.1.4 Math and Reading Scores by Grade
+            The following is given:
+                  # Create a Series of scores by grade levels using conditionals.
+
+                        ninth_graders=school_data_complete_df[(school_data_complete_df["grade"] == "9th")]
+                        tenth_graders = school_data_complete_df[(school_data_complete_df["grade"] == "10th")]
+                        eleventh_graders = school_data_complete_df[(school_data_complete_df["grade"] == "11th")]
+                        twelfth_graders = school_data_complete_df[(school_data_complete_df["grade"] == "12th")]
+
+                        # Group each school Series by the school name for the average math score.
+
+                        ninth_grade_math_scores = ninth_graders.groupby(["school_name"]).mean()["math_score"]
+
+                        tenth_grade_math_scores = tenth_graders.groupby(["school_name"]).mean()["math_score"]
+
+                        eleventh_grade_math_scores = eleventh_graders.groupby(["school_name"]).mean()["math_score"]
+
+                        twelfth_grade_math_scores = twelfth_graders.groupby(["school_name"]).mean()["math_score"]
+
+
+
+                  # Group each school Series by the school name for the average reading score.
+                        ninth_grade_reading_scores = ninth_graders.groupby(["school_name"]).mean()["reading_score"]
+
+                        tenth_grade_reading_scores = tenth_graders.groupby(["school_name"]).mean()["reading_score"]
+
+                        eleventh_grade_reading_scores = eleventh_graders.groupby(["school_name"]).mean()["reading_score"]
+
+                        twelfth_grade_reading_scores = twelfth_graders.groupby(["school_name"]).mean()["reading_score"]
+
+
+
+
+
+
+
