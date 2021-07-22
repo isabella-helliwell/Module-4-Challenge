@@ -120,7 +120,11 @@ output.3
                    passing_reading_count           
           
           5-  Calculate the passing percentages with the new total student count.
-                   passing_math_count_new= school_data_complete_df[(school_data_complete_df["math_score"] >= 70)&(school_data_complete_df["math_score"]!=np.nan)].count()                                                                                                                                                      ["student_name"]                                        passing_reading_count_new= school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)(school_data_complete_df["reading_score"]!=np.nan)].count()                                                                                                                                               ["student_name"]          
+                   passing_math_count_new= school_data_complete_df[(school_data_complete_df["math_score"] >= 70)&(school_data_complete_df["math_score"]!=np.nan)]
+                                                                                                                                          .count()["student_name"]      
+                                                
+                   passing_reading_count_new= school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)(school_data_complete_df["reading_score"]!=np.nan)]
+                                                                                                                                           .count()["student_name"]                                                                                                                                                         
                   
           6- Calculate the percentage of passing math and reading scores per school.
                   passing_math_percentage = passing_math_count_new / student_count_new * 100
