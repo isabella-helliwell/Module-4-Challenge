@@ -258,7 +258,7 @@ output .5
             2. THS is the Thomas High School Graders without the 9th graders
                   THS_total_graders=tenth_graders_count+eleventh_graders_count+twelfth_graders_count
                   
-                  
+                                                                                                                                                                   
             3. Get all the students passing math from THS
                   THS_passing_math= school_data_complete_df.loc[(school_data_complete_df["school_name"] == "Thomas High School")
                                                                   & (school_data_complete_df["math_score"] >= 70)
