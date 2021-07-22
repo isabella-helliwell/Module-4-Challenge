@@ -176,5 +176,8 @@ output.3
                   # Display the data frame
                   district_summary_df
 
-          
+ output.4
+ ![image](https://user-images.githubusercontent.com/85843030/126577665-7e84b882-958b-4bba-9857-39e4ebb62e4d.png)
+
+      
           
