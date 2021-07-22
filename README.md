@@ -588,15 +588,17 @@ output. 16
             
             
   ##. 4 Results and comaprisons
-      After replacing the 9th grader student's grades with a "NaN', it can bee seen (comparing output 1 to 18)that the effect on the overall percentage pass
-      and grades are insignificant
+        Effect on district summary:
+        After replacing the 9th grader student's grades with a "NaN', it can bee seen (comparing output 4 and 18)that the effect on the overall percentage pass
+        and grades are insignificant
             
             
-  output. 18
+  output. 18 : original district_summary_df
   ![image](https://user-images.githubusercontent.com/85843030/126686498-3392b253-df9d-4109-8fe6-41e2aec030ae.png)
 
            
-            
+        Effetc on school summary
+        
             
    
           
