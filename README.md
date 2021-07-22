@@ -241,7 +241,8 @@ output.3
            
 output .5
 
-![image](https://user-images.githubusercontent.com/85843030/126578095-50aa1a83-b64c-4984-bbe7-c05b7d57d90d.png)
+![image](https://user-images.githubusercontent.com/85843030/126662100-eeacf662-eb54-4e25-b670-8da6c324c8d2.png)
+
 
 
          Analysis for Thomas High School
