@@ -182,7 +182,7 @@ output.3
       
  #### 3.1.2 School Summary
  
-             The following is given for the scholl analysis:
+             The following is given for the school analysis:
                   # Determine the School Type
                   per_school_types = school_data_df.set_index(["school_name"])["type"]
 
