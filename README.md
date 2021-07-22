@@ -242,3 +242,59 @@ output.3
 output .5
 
 ![image](https://user-images.githubusercontent.com/85843030/126578095-50aa1a83-b64c-4984-bbe7-c05b7d57d90d.png)
+
+
+         Analysis for Thomas High School
+                  
+           1. Get the number of 10th-12th graders from Thomas High School (THS).
+
+                  tenth_graders_count= school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School")
+                                                            &(school_data_complete_df["grade"] == "10th")]["Student ID"].count()
+                                         
+                  eleventh_graders_count = school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School")
+                                                            &(school_data_complete_df["grade"] == "11th")]["Student ID"].count()
+
+
+                  twelfth_graders_count= school_data_complete_df[(school_data_complete_df["school_name"] == "Thomas High School")
+                                                            &(school_data_complete_df["grade"] == "12th")]["Student ID"].count()
+                  
+            2. THS is the Thomas High School Graders without the 9th graders
+                  THS_total_graders=tenth_graders_count+eleventh_graders_count+twelfth_graders_count
+                  
+                  
+            3. Get all the students passing math from THS
+                  THS_passing_math= school_data_complete_df.loc[(school_data_complete_df["school_name"] == "Thomas High School")
+                                                                  & (school_data_complete_df["math_score"] >= 70)
+                                                                  & (school_data_complete_df["math_score"]!=np.nan)]["Student ID"].count()
+
+             4 . Get all the students passing reading from THS
+                  THS_passing_reading= school_data_complete_df.loc[(school_data_complete_df["school_name"]== "Thomas High School")
+                                                                  & (school_data_complete_df["reading_score"] >= 70)
+                                                                  & (school_data_complete_df["reading_score"]!=np.nan)]["Student ID"].count()
+                                                 
+             5. Get all the students passing math and reading from THS
+                  THS_passing_math_reading=school_data_complete_df.loc[(school_data_complete_df["school_name"]== "Thomas High School")
+                                                                  &(school_data_complete_df["math_score"] >= 70)
+                                                                  &(school_data_complete_df["reading_score"] >= 70)]["Student ID"].count()        
+                                                    
+                                                    
+                                                    
+             6. Calculate the percentage of 10th-12th grade students passing math from Thomas High School. 
+                  THS_total_graders= tenth_graders_count + eleventh_graders_count + twelfth_graders_count                                                                                           THS_passing_math_percentage = THS_passing_math / THS_total_graders * 100                                                   
+                                                    
+                                                    
+              7. Calculate the percentage of 10th-12th grade students passing reading from Thomas High School.
+                  THS_passing_reading_percentage = THS_passing_reading / THS_total_graders * 100                                                   
+                                                    
+                                                    
+              8. Calculate the overall passing percentage of 10th-12th grade from Thomas High School. 
+                  THS_passing_math_reading_percentage = THS_passing_math_reading / THS_total_graders * 100 
+                                                                                                    
+             9 . Replace the passing math percent for Thomas High School in the per_school_summary_df.
+                  per_school_summary_df.loc["Thomas High School", "% Passing Math"] = THS_passing_math_percentage                           
+                  per_school_summary_df
+    
+ output .6
+ ![image](https://user-images.githubusercontent.com/85843030/126660865-36d72c90-3b34-478e-8a9f-b39047118b17.png)
+
+    
