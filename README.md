@@ -292,7 +292,8 @@ output .5
                   per_school_summary_df
     
  output .6
- ![image](https://user-images.githubusercontent.com/85843030/126660865-36d72c90-3b34-478e-8a9f-b39047118b17.png)
+![image](https://user-images.githubusercontent.com/85843030/126689828-f352fb68-6523-4023-9171-9a3745493644.png)
+
 
    #### 3.1.3 High and Low Performing Schools
               The five top and five bottom performing schools are sorted on their overall percentage pass.
