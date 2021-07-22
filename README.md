@@ -1,7 +1,7 @@
 # School District Analysis
 ## 1. Purpose
       The purpose of this analysis is to create a school district summary and a school summary where one of the schools graders have been removed.
-      The Thoma High School's results for math and reading for all the 9 graders have been set to Nan's.
+      The Thomas High School's results for math and reading for all the 9 graders have been set to Nan's.
       First part of the analysis is to create
       * district summary
       * school summary
