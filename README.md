@@ -612,13 +612,13 @@ output. 16
         for the Thomas High School, it will show a "nan" value as expected.
         
         
-### 4.3 Effect on Scores by School Spending
+### 4.4 Effect on Scores by School Spending
 
       There is no affect on this criteria, because in our analysis we have already replaced the Thomas High School scores with the scores that
       were calculated using only 10-12 graders results.
       It is also worth noting that the total students at the Thomas High School is still shown as 1635.
    
- ### 4.4 Effect by School Size & School Type
+ ### 4.5 Effect by School Size & School Type
       No effect on adding the 'nan's" to Thomas High School 9 graders as mentioned above. The math, reading scores have already taken into account and omitted 
       the non values of the 9 graders previously, and therefore any additional analysis here will nopt directly affect the results.
       
