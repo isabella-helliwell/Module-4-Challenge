@@ -436,3 +436,59 @@ output. 10
   ![image](https://user-images.githubusercontent.com/85843030/126670985-943507e7-aa44-4a80-8056-5e63e5379383.png)
 
              
+            # Establish the spending bins and group names.
+                        spending_bins = [0, 585, 630, 645, 675]
+                        group_names = ["<$584", "$585-629", "$630-644", "$645-675"]          
+
+            # Categorize spending based on the bins.
+                        per_school_summary_df["Spending Ranges (Per Student)"] = pd.cut(per_school_capita, spending_bins, labels=group_names)
+                        per_school_summary_df.head()
+
+
+output. 13
+![image](https://user-images.githubusercontent.com/85843030/126672994-4120178e-9c52-4e0e-bb44-3c3c00243e54.png)
+
+
+            # Calculate the average math, reading, and overall percentage pass for each school for the 4 bins.
+            
+                        spending_math_scores = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Math Score"]
+
+                        spending_reading_scores = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Reading Score"]
+
+                        spending_passing_math = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Math"]
+
+                        spending_passing_reading = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Reading"]
+
+                        overall_passing_spending = per_school_summary_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Overall Passing"]        
+
+            # Create the DataFrame
+            spending_summary_df = pd.DataFrame({
+                      "Average Math Score" : spending_math_scores,
+                      "Average Reading Score": spending_reading_scores,
+                      "% Passing Math": spending_passing_math,
+                      "% Passing Reading": spending_passing_reading,
+                      "% Overall Passing": overall_passing_spending})
+
+            # Format the DataFrame 
+                        spending_summary_df["Average Math Score"] = spending_summary_df["Average Math Score"].map("{:.1f}".format)
+
+                        spending_summary_df["Average Reading Score"] = spending_summary_df["Average Reading Score"].map("{:.1f}".format)
+
+                        spending_summary_df["% Passing Math"] = spending_summary_df["% Passing Math"].map("{:.0f}".format)
+
+                        spending_summary_df["% Passing Reading"] = spending_summary_df["% Passing Reading"].map("{:.0f}".format)
+
+                        spending_summary_df["% Overall Passing"] = spending_summary_df["% Overall Passing"].map("{:.0f}".format)
+
+                  spending_summary_df
+
+
+output. 14
+![image](https://user-images.githubusercontent.com/85843030/126673977-7ba8ed12-48b3-4d71-bfa1-0983637bf44b.png)
+
+        
+#### 3.1.6 Scores by School Size
+            Group the scores by school size, where the ranges of small, medium, and large are chosen depending on the school sizes in
+            the output
+            
+            
