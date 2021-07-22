@@ -354,8 +354,8 @@ output .8
 
                         math_scores_by_grade.head(15)
                         
-output. 9
-![image](https://user-images.githubusercontent.com/85843030/126664664-89a4d596-0370-4f8e-8bba-2341266c05ca.png)
+
+
 
 
 
@@ -368,7 +368,53 @@ output. 9
 
                         reading_scores_by_grade.head(15)
                     
-  output. 10
-  ![image](https://user-images.githubusercontent.com/85843030/126665141-fc1ad606-588b-46e6-8325-1096b80eee6f.png)
+
+ 
+
+
+              3. Format each grade column and order the columns from 9th grade to 12th grade
+                    # Format each grade column.
+
+                              math_scores_by_grade["9th"] = math_scores_by_grade["9th"].map("{:.1f}".format)
+
+                              math_scores_by_grade["10th"] = math_scores_by_grade["10th"].map("{:.1f}".format)
+
+                              math_scores_by_grade["11th"] = math_scores_by_grade["11th"].map("{:.1f}".format)
+
+                              math_scores_by_grade["12th"] = math_scores_by_grade["12th"].map("{:.1f}".format)
+
+                              reading_scores_by_grade["9th"] = reading_scores_by_grade["9th"].map("{:,.1f}".format)
+
+                              reading_scores_by_grade["10th"] = reading_scores_by_grade["10th"].map("{:,.1f}".format)
+
+                              reading_scores_by_grade["11th"] = reading_scores_by_grade["11th"].map("{:,.1f}".format)
+
+                              reading_scores_by_grade["12th"] = reading_scores_by_grade["12th"].map("{:,.1f}".format)
+
+                     # Make sure the columns are in the correct order.
+
+                              math_scores_by_grade = math_scores_by_grade[["9th", "10th", "11th", "12th"]]
+                              reading_scores_by_grade = reading_scores_by_grade[["9th", "10th", "11th", "12th"]]
+
+                     # Remove the index.
+                              math_scores_by_grade.index.name = None
+                              reading_scores_by_grade.index.name = None
+
+                     # Display the data frame
+
+                              math_scores_by_grade.head(15)
+             
+output. 9 
+![image](https://user-images.githubusercontent.com/85843030/126669004-ffebfc4a-a233-456a-b15f-134d3fd23ee3.png)
+
+
+
+                     # Display the data frame
+                              reading_scores_by_grade.head(15)
+                              
+output. 10
+![image](https://user-images.githubusercontent.com/85843030/126669122-8c6fc027-7e87-4ad9-b30c-0bd2661ebcd2.png)
+
+
 
 
