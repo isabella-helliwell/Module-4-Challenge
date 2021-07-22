@@ -604,23 +604,22 @@ output. 16
         'NaN' values for the Thomas High School, the rates are much lower, due to the fact that the percentage calculations for the 
         Thomas High School take into account all grades, hence the exsistance of the 9th graders with no marks, will bring the scores down.
         In output .6, the percentage score calculations have only taken into account the students for the 10th-12th graders, hence the calculated
-        scores will be much higher without any blank values bringing the scores down.
+        scores will be much higher without any non values bringing the scores down.
         
 ### 4.3 Effect on Math and Reading Scores by Grade
         
         Removing the 9th gradres from the scores by grades, will have no effect on the table itself, apart from where the "9th" column is visible
-        for the Thomas High School, it will show a "nan" value as spected.
+        for the Thomas High School, it will show a "nan" value as expected.
         
         
 ### 4.3 Effect on Scores by School Spending
 
       There is no affect on this criteria, because in our analysis we have already replaced the Thomas High School scores with the scores that
       were calculated using only 10-12 graders results.
-      It is also worth noting that the total students at the Thomas High School is still shown as 1635. Despite the fact that we have used 
-      1635(tot)-461(9th graders) =1174 for the anaysis were the 9th graders have been omitted.
+      It is also worth noting that the total students at the Thomas High School is still shown as 1635.
    
  ### 4.4 Effect by School Size & School Type
-      No effect on adding the 'nan's" to Thomas High School 9 graders as mentioned above. The math, reading scores have already taken into account
+      No effect on adding the 'nan's" to Thomas High School 9 graders as mentioned above. The math, reading scores have already taken into account and omitted 
       the non values of the 9 graders previously, and therefore any additional analysis here will nopt directly affect the results.
   
-
+In general, if we had used the Thomas High values in output. 5 and not replaced them with output. 6, our data would have changed somewhat.
