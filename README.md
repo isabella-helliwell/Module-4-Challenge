@@ -489,6 +489,57 @@ output. 14
         
 #### 3.1.6 Scores by School Size
             Group the scores by school size, where the ranges of small, medium, and large are chosen depending on the school sizes in
-            the output
+            total student column in output. 5.
             
             
+                  # Establish the bins.
+                  per_school_counts
+                  size_bins = [0, 1000, 2000, 5000]
+                  group_names = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
+                  # Categorize spending based on the bins.
+                  per_school_summary_df["School Size"] = pd.cut(per_school_summary_df["Total Students"], size_bins, labels=group_names)
+
+                  per_school_summary_df.head(15)
+          
+                  
+output.15 
+![image](https://user-images.githubusercontent.com/85843030/126675196-d8cfff5e-732b-4e31-a810-25305dd3d422.png)
+
+
+                  The average math, reading scores and the percentage passing grades are calculated and shown against the school size
+                  
+                  # Calculate averages for the desired columns. 
+
+                        size_math_scores = per_school_summary_df.groupby(["School Size"]).mean()["Average Math Score"]
+
+                        size_reading_scores = per_school_summary_df.groupby(["School Size"]).mean()["Average Reading Score"]
+
+                        size_passing_math = per_school_summary_df.groupby(["School Size"]).mean()["% Passing Math"]
+
+                        size_passing_reading = per_school_summary_df.groupby(["School Size"]).mean()["% Passing Reading"]
+
+                        size_overall_passing = per_school_summary_df.groupby(["School Size"]).mean()["% Overall Passing"]
+
+                        # Assemble into DataFrame. 
+                        size_summary_df = pd.DataFrame({
+                                  "Average Math Score" : size_math_scores,
+                                  "Average Reading Score": size_reading_scores,
+                                  "% Passing Math": size_passing_math,
+                                  "% Passing Reading": size_passing_reading,
+                                  "% Overall Passing": size_overall_passing})
+
+                                  # Format the DataFrame  
+                        size_summary_df["Average Math Score"] = size_summary_df["Average Math Score"].map("{:.1f}".format)
+
+                        size_summary_df["Average Reading Score"] = size_summary_df["Average Reading Score"].map("{:.1f}".format)
+
+                        size_summary_df["% Passing Math"] = size_summary_df["% Passing Math"].map("{:.0f}".format)
+
+                        size_summary_df["% Passing Reading"] = size_summary_df["% Passing Reading"].map("{:.0f}".format)
+
+                        size_summary_df["% Overall Passing"] = size_summary_df["% Overall Passing"].map("{:.0f}".format)
+
+                        size_summary_df
+                        
+output. 16
+![image](https://user-images.githubusercontent.com/85843030/126675881-c1691a83-a494-4316-a65c-43b7c2e7d367.png)
